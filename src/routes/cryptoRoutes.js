@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import cryptoService from '../services/cryptoService.js';
+
 const router = express.Router();
-const cryptoService = require('../services/cryptoService');
 
 const validateCoinId = (req, res, next) => {
   const validCoins = ['bitcoin', 'matic-network', 'ethereum'];
@@ -14,7 +15,6 @@ const validateCoinId = (req, res, next) => {
   
   next();
 };
-
 
 router.get('/stats', validateCoinId, async (req, res) => {
   try {
@@ -50,4 +50,4 @@ router.get('/deviation', validateCoinId, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

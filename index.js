@@ -1,8 +1,8 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./src/config/db');
-const cryptoRoutes = require('./src/routes/cryptoRoutes');
-const cryptoJob = require('./src/jobs/cryptoJob');
+import express from 'express';
+import dotenv from 'dotenv';
+import connectDB from './src/config/db.js';
+import cryptoRoutes from './src/routes/cryptoRoutes.js';
+import cryptoJob from './src/jobs/cryptoJob.js';
 
 dotenv.config();
 
@@ -25,4 +25,4 @@ app.listen(port, () => {
   cryptoJob.start();
 });
 
-module.exports = app;
+export default app;

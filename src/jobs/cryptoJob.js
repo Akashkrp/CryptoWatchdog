@@ -1,6 +1,6 @@
-const cron = require('node-cron');
-const Crypto = require('../models/crypto');
-const cryptoService = require('../services/cryptoService');
+import cron from 'node-cron';
+import Crypto from '../models/crypto.js';
+import cryptoService from '../services/cryptoService.js';
 
 const cryptoJob = cron.schedule('0 */2 * * *', async () => { 
   const coins = ['bitcoin', 'matic-network', 'ethereum'];
@@ -24,4 +24,4 @@ const cryptoJob = cron.schedule('0 */2 * * *', async () => {
   }
 });
 
-module.exports = cryptoJob;
+export default cryptoJob;

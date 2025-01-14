@@ -1,5 +1,5 @@
-const axios = require('axios');
-const Crypto = require('../models/crypto');
+import axios from 'axios';
+import Crypto from '../models/crypto.js';
 
 class CryptoService {
   async fetchCryptoData(coinId) {
@@ -44,4 +44,4 @@ class CryptoService {
   }
 }
 
-module.exports = new CryptoService();
+export default new CryptoService();

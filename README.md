@@ -14,8 +14,6 @@ A server-side application developed using Node.js and MongoDB to track cryptocur
    - `/stats`: Fetches the latest data for a specific cryptocurrency.
    - `/deviation`: Calculates the standard deviation of the cryptocurrency's price from the last 100 records.
 
-
-
 ---
 
 
